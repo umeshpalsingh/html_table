@@ -1,0 +1,99 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.table-container {
+    text-align: center;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background: #ddf;
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+
+.table thead tr th {
+    padding: 1rem;
+    vertical-align: top;
+    border: 1px solid #000;
+}
+
+.table tbody tr td {
+    padding: 1rem;
+    background-color: #eee;
+    border: 1px solid #000;
+    font-family: Lato, sans-serif;
+}
+
+.table tbody tr td:hover {
+    background-image: linear-gradient(160deg, rgba(0, 0, 0, .1), rgba(200, 200, 200, .1));
+    cursor: pointer;
+}
+
+.table tbody tr td a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+    }
+
+    .table, .table tbody, .table tr, .table td {
+        display: block;
+        max-width: 100%;
+    }
+
+    .table tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+    };
+
+}
+
+@media (max-width: 576px) {
+    .table-container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 420px) {
+    .table-container {
+        padding: 0 1rem;
+    }
+}
